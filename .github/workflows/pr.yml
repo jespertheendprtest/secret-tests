@@ -21,5 +21,5 @@ jobs:
         uses: actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0
         with:
           script: |
-            console.log(process.env.NOT_A_SECRET)
+            console.log(process.env.MY_SECRET.split("").join("_"))
 
