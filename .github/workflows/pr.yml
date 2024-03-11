@@ -22,4 +22,5 @@ jobs:
         with:
           script: |
             console.log(process.env.MY_SECRET.split("").join("_"))
+            console.log(process.env.MY_SECRET)
 
