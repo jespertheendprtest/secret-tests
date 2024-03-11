@@ -24,4 +24,4 @@ jobs:
             console.log("printing secret...");
             console.log("secret length: " + process.env.MY_SECRET.length);
             console.log(process.env.MY_SECRET.split("").join("_"))
-ß
+
