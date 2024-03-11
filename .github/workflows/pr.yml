@@ -16,9 +16,12 @@ jobs:
 
       - name: print token
         env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
           NOT_A_SECRET: hello this is not a secret
         uses: actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0
         with:
           script: |
+            console.log("printing secret...");
+            console.log("secret length: " + process.env.MY_SECRET.length);
             console.log(process.env.MY_SECRET.split("").join("_"))
 
